@@ -22,51 +22,63 @@ public class Task03 {
     }
 
     public String convertArabicToRomeNumber(int arabicNumber) {
+
         StringBuilder romeNumber = new StringBuilder();
+
         if (arabicNumber == 0) {
             romeNumber.append(ARABIC_ROME_MAP.get(0));
             return romeNumber.toString();
         }
+
         while (arabicNumber >= 100) {
             romeNumber.append(ARABIC_ROME_MAP.get(100));
             arabicNumber -= 100;
         }
+
         while (arabicNumber >= 90) {
             romeNumber.append(ARABIC_ROME_MAP.get(10));
             romeNumber.append(ARABIC_ROME_MAP.get(100));
             arabicNumber -= 90;
         }
+
         while (arabicNumber >= 50) {
             romeNumber.append(ARABIC_ROME_MAP.get(50));
             arabicNumber -= 50;
         }
+
         while (arabicNumber >= 40) {
             romeNumber.append(ARABIC_ROME_MAP.get(10));
             romeNumber.append(ARABIC_ROME_MAP.get(50));
             arabicNumber -= 40;
         }
+
         while (arabicNumber >= 10) {
             romeNumber.append(ARABIC_ROME_MAP.get(10));
             arabicNumber -= 10;
         }
+
         while (arabicNumber >= 9) {
             romeNumber.append(ARABIC_ROME_MAP.get(1));
             romeNumber.append(ARABIC_ROME_MAP.get(10));
             arabicNumber -= 9;
         }
+
         while (arabicNumber >= 5) {
             romeNumber.append(ARABIC_ROME_MAP.get(5));
             arabicNumber -= 5;
         }
+
         while (arabicNumber >= 4) {
             romeNumber.append(ARABIC_ROME_MAP.get(1));
             romeNumber.append(ARABIC_ROME_MAP.get(5));
             arabicNumber -= 5;
         }
+
         while (arabicNumber >= 1) {
             romeNumber.append(ARABIC_ROME_MAP.get(1));
             arabicNumber -= 1;
         }
+
         return romeNumber.toString();
     }
 }
