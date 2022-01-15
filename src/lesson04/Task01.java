@@ -11,17 +11,13 @@ package lesson04;
 
 public class Task01 {
     public static int ageGroupIdentifier(int age) {
-        int groupNotFound = -1;
-        int groupFromSevenToThirteen = 1;
-        int groupFromFourteenToSeventeen = 2;
-        int groupFromEighteenToSixtyFive = 3;
 
         if (age > 6 && age < 14) {
-            return groupFromSevenToThirteen;
+            return age;
         } else if (age > 13 && age < 18) {
-            return groupFromFourteenToSeventeen;
+            return age;
         } else if (age > 17 && age < 66) {
-            return groupFromEighteenToSixtyFive;
-        } else return groupNotFound;
+            return age;
+        } else return -1;
     }
 }
